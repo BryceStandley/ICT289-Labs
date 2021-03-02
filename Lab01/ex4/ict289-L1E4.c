@@ -1,36 +1,40 @@
+//Program by Bryce Standley
+//Murdoch Student Number: 33046367
+//Unit: ICT289
+//Exercise: Lab01 Ex 4
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <ctype.h>
 
-struct offVert
+struct vectorData
 {
     float x, y, z;
 };
 
-struct offTri
+struct faceData
 {
-    int triX, triY, triZ;
+    int x, y, z;
 };
-
-typedef struct offVert offVert;
-typedef struct offTri offTri;
+typedef struct vectorData vectorData;
+typedef struct faceData faceData;
 
 char fileName[32];
 char line[32];
 FILE *file;
 int nVert, nFace;
 
-
-
-
-void readOFFFile(offVert openFileVert[], offTri openFileTri[]);
-void FindOFFVertAndFace();
-
-void FindOFFVertAndFace()
+int FindOFFVertAndFace()
 {
     int vert, face;
     file = fopen(fileName, "r");
+    if(file == NULL)
+    {
+        printf("File failed to open! now quitting!\n");
+        return(0);
+    }
+
     int i = 0;
     while(fgets(line, 32, file) != NULL)
     {
@@ -63,13 +67,14 @@ void FindOFFVertAndFace()
 
         default:
             fclose(file);
-            return;
+            return(1);
             break;
         };
     } 
+    return(1);
 }
 
-void readOFFFile(offVert openFileVert[], offTri openFileTri[])
+void readOFFFile(vectorData *openOffFileVectors, faceData *openOffFileFaces)
 {
     int vert, face;
     file = fopen(fileName, "r");
@@ -77,7 +82,6 @@ void readOFFFile(offVert openFileVert[], offTri openFileTri[])
     int lineCount = 0;
     while(fgets(line, 32, file) != NULL)
     {
-        printf("%d   %s \n", i, line);
         switch (i)
         {
         case 0:
@@ -96,20 +100,21 @@ void readOFFFile(offVert openFileVert[], offTri openFileTri[])
                     switch (count)
                     {
                         case 0:
-                            openFileVert[lineCount].x = atof(token);
+                            openOffFileVectors[lineCount].x = atof(token);
                             break;
                         case 1:
-                            openFileVert[lineCount].y = atof(token);
+                            openOffFileVectors[lineCount].y = atof(token);
                             break;
                         case 2:
-                            openFileVert[lineCount].z = atof(token);
+                            openOffFileVectors[lineCount].z = atof(token);
                             break;
                         default:
                             break;
                     }
                     count++;
-                    lineCount++;
+                    
                 }  
+                lineCount++;
             }
             else if(i > nVert + 2)
             {
@@ -126,76 +131,82 @@ void readOFFFile(offVert openFileVert[], offTri openFileTri[])
                             //ignore the first value
                             break;
                         case 1:
-                            openFileTri[lineCount].triX = atoi(token);
+                            openOffFileFaces[lineCount].x = atoi(token);
                             break;
                         case 2:
-                            openFileTri[lineCount].triY = atoi(token);
+                            openOffFileFaces[lineCount].y = atoi(token);
                             break;
                         case 3:
-                            openFileTri[lineCount].triZ = atoi(token);
+                            openOffFileFaces[lineCount].z = atoi(token);
                             break;
                         default:
                             break;
                     }
                     count++;
-                    lineCount++;
-                }  
+                    
+                } 
+                lineCount++; 
             }
                 i++;  
                 break;  
             }
         };
-        printf("File Closed");
     fclose(file);
     return;
 }
 
+
+
 int main ()
 {
     printf("Please enter the OFF file to open: ");
-    scanf("%s%*c", &fileName);
+    scanf("%s", fileName);
 
-    FindOFFVertAndFace();
+    if(FindOFFVertAndFace() == 0)
+    {
+        return(0);
+    }
+
     const int vert = nVert;
     const int face = nFace;
-    offVert openFileVert[vert];
-    offTri openFileTri[face];
-    printf("Got to here");
-    readOFFFile(openFileVert, openFileTri);
+    vectorData openOffFileVectors[vert];
+    faceData openOffFileFaces[face];
+
+    readOFFFile(openOffFileVectors, openOffFileFaces);
     char ch;
-    printf("There is %d vertices and %d faces within this off file\n", nVert, nFace);
-    printf("Press enter to start to display each vertice, continue to press enter to display each vertice or f to start showing faces\n");
-    scanf("%c*%c", &ch);
+    printf("\n-------------------------------------------\n");
+    printf("There is %d vectors and %d faces within %s\n", nVert, nFace, fileName);
+    printf("-------------------------------------------\n");
+    printf("Press enter to start to display each vector, continue to press enter to display each vector or f to start showing faces\n");
+    scanf("%c", &ch);
     int i = 0;
     ch = tolower(ch);
-    if(ch == 'f')
+
+    if(ch == '\n')
     {
-        printf("Press enter to start to display each face, continue to press enter to display each face or q to quit\n");
-        if(tolower(ch) == 'q')
-        {
-            return(0);
-        }
-        else
-        {
-            do
-            {
-                printf("Face: X:%d, Y:%d, Z:%d\n", openFileTri[i].triX, openFileTri[i].triY, openFileTri[i].triZ);
-                i++;
-                scanf("%c*%c", &ch);
-            }while(ch == '\n');
-        }
-    }
-    else
-    {
-        i = 0;
         do
         {
-            printf("Vertex: X:%f, Y:%f, Z:%f\n", openFileVert[i].x, openFileVert[i].y, openFileVert[i].z);
+            printf("\nVertex: X:%f, Y:%f, Z:%f\n", openOffFileVectors[i].x, openOffFileVectors[i].y, openOffFileVectors[i].z);
             i++;
-            scanf("%c*%c", &ch);
-        } while (ch == '\n');
-        
+            scanf("%c", &ch);
+        }while(ch == '\n');
     }
+
+    if(ch == 'f')
+    {
+        do
+        {
+            printf("\nFace: X:%d, Y:%d, Z:%d\n", openOffFileFaces[i].x, openOffFileFaces[i].y, openOffFileFaces[i].z);
+            i++;
+            scanf("%c", &ch);
+        }while(ch == '\n');
+    }
+
+    if(ch == 'q')
+    {
+        return(0);
+    }
+
     return 0;
 }
 
