@@ -1,0 +1,20 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"window.h": "c",
+			"colours.h": "c",
+			"freeglut.h": "c",
+			"freeglut_std.h": "c",
+			"windows.h": "c",
+			"camera.h": "c",
+			"input.h": "c",
+			"corecrt_math_defines.h": "c",
+			"stdbool.h": "c"
+		}
+	}
+}

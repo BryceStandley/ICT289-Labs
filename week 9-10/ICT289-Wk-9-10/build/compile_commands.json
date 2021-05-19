@@ -1,0 +1,37 @@
+[
+{
+  "directory": "X:/Gits/ICT289-Labs/week 9-10/ICT289-Wk-9-10/build",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\X8EAA8~1.EXE  @CMakeFiles/Week8-10.dir/includes_C.rsp -g -std=gnu11 -o CMakeFiles\\Week8-10.dir\\src\\application.c.obj -c \"X:\\Gits\\ICT289-Labs\\week 9-10\\ICT289-Wk-9-10\\src\\application.c\"",
+  "file": "X:/Gits/ICT289-Labs/week 9-10/ICT289-Wk-9-10/src/application.c"
+},
+{
+  "directory": "X:/Gits/ICT289-Labs/week 9-10/ICT289-Wk-9-10/build",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\X8EAA8~1.EXE  @CMakeFiles/Week8-10.dir/includes_C.rsp -g -std=gnu11 -o CMakeFiles\\Week8-10.dir\\src\\camera.c.obj -c \"X:\\Gits\\ICT289-Labs\\week 9-10\\ICT289-Wk-9-10\\src\\camera.c\"",
+  "file": "X:/Gits/ICT289-Labs/week 9-10/ICT289-Wk-9-10/src/camera.c"
+},
+{
+  "directory": "X:/Gits/ICT289-Labs/week 9-10/ICT289-Wk-9-10/build",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\X8EAA8~1.EXE  @CMakeFiles/Week8-10.dir/includes_C.rsp -g -std=gnu11 -o CMakeFiles\\Week8-10.dir\\src\\input.c.obj -c \"X:\\Gits\\ICT289-Labs\\week 9-10\\ICT289-Wk-9-10\\src\\input.c\"",
+  "file": "X:/Gits/ICT289-Labs/week 9-10/ICT289-Wk-9-10/src/input.c"
+},
+{
+  "directory": "X:/Gits/ICT289-Labs/week 9-10/ICT289-Wk-9-10/build",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\X8EAA8~1.EXE  @CMakeFiles/Week8-10.dir/includes_C.rsp -g -std=gnu11 -o CMakeFiles\\Week8-10.dir\\src\\model.c.obj -c \"X:\\Gits\\ICT289-Labs\\week 9-10\\ICT289-Wk-9-10\\src\\model.c\"",
+  "file": "X:/Gits/ICT289-Labs/week 9-10/ICT289-Wk-9-10/src/model.c"
+},
+{
+  "directory": "X:/Gits/ICT289-Labs/week 9-10/ICT289-Wk-9-10/build",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\X8EAA8~1.EXE  @CMakeFiles/Week8-10.dir/includes_C.rsp -g -std=gnu11 -o CMakeFiles\\Week8-10.dir\\src\\scene.c.obj -c \"X:\\Gits\\ICT289-Labs\\week 9-10\\ICT289-Wk-9-10\\src\\scene.c\"",
+  "file": "X:/Gits/ICT289-Labs/week 9-10/ICT289-Wk-9-10/src/scene.c"
+},
+{
+  "directory": "X:/Gits/ICT289-Labs/week 9-10/ICT289-Wk-9-10/build",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\X8EAA8~1.EXE  @CMakeFiles/Week8-10.dir/includes_C.rsp -g -std=gnu11 -o CMakeFiles\\Week8-10.dir\\src\\vector.c.obj -c \"X:\\Gits\\ICT289-Labs\\week 9-10\\ICT289-Wk-9-10\\src\\vector.c\"",
+  "file": "X:/Gits/ICT289-Labs/week 9-10/ICT289-Wk-9-10/src/vector.c"
+},
+{
+  "directory": "X:/Gits/ICT289-Labs/week 9-10/ICT289-Wk-9-10/build",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\X8EAA8~1.EXE  @CMakeFiles/Week8-10.dir/includes_C.rsp -g -std=gnu11 -o CMakeFiles\\Week8-10.dir\\src\\window.c.obj -c \"X:\\Gits\\ICT289-Labs\\week 9-10\\ICT289-Wk-9-10\\src\\window.c\"",
+  "file": "X:/Gits/ICT289-Labs/week 9-10/ICT289-Wk-9-10/src/window.c"
+}
+]

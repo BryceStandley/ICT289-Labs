@@ -1,0 +1,8 @@
+/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" "/Volumes/MEGA/Gits/ICT289-Labs/Week 5-6"
+
+Library: FREEGLUT found! Located at: /Volumes/MEGA/Gits/ICT289-Labs/Week 5-6/ViewingLab/lib/libglut.3.11.0.dylib
+Library: GLUT found! Located at: /Volumes/MEGA/Gits/ICT289-Labs/Week 5-6/ViewingLab/lib/libglut.a
+
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /Volumes/MEGA/Gits/ICT289-Labs/Week 5-6/cmake-build-debug

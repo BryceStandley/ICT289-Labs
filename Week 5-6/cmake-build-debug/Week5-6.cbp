@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="Week5-6"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\ViewingLab\;CMake Files\ViewingLab\cmakeFiles\;CMake Files\ViewingLab\src\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/Volumes/MEGA/Gits/ICT289-Labs/Week 5-6/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j6 -f &quot;/Volumes/MEGA/Gits/ICT289-Labs/Week\ 5-6/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/Volumes/MEGA/Gits/ICT289-Labs/Week\ 5-6/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/Volumes/MEGA/Gits/ICT289-Labs/Week\ 5-6/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/Volumes/MEGA/Gits/ICT289-Labs/Week\ 5-6/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/Volumes/MEGA/Gits/ICT289-Labs/Week 5-6/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j6 -f &quot;/Volumes/MEGA/Gits/ICT289-Labs/Week\ 5-6/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/Volumes/MEGA/Gits/ICT289-Labs/Week\ 5-6/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/Volumes/MEGA/Gits/ICT289-Labs/Week\ 5-6/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/Volumes/MEGA/Gits/ICT289-Labs/Week\ 5-6/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Volumes/MEGA/Gits/ICT289-Labs/Week 5-6/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j6 -f &quot;/Volumes/MEGA/Gits/ICT289-Labs/Week\ 5-6/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/Volumes/MEGA/Gits/ICT289-Labs/Week\ 5-6/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/Volumes/MEGA/Gits/ICT289-Labs/Week\ 5-6/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/Volumes/MEGA/Gits/ICT289-Labs/Week\ 5-6/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Week5-6">
+				<Option output="/Volumes/MEGA/Gits/ICT289-Labs/Week 5-6/cmake-build-debug/Week5-6" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Volumes/MEGA/Gits/ICT289-Labs/Week 5-6/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Volumes/MEGA/Gits/ICT289-Labs/Week 5-6/ViewingLab/include"/>
+					<Add directory="/Volumes/MacDataDrive/Apps/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Volumes/MacDataDrive/Apps/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.3/include"/>
+					<Add directory="/Volumes/MacDataDrive/Apps/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j6 -f &quot;/Volumes/MEGA/Gits/ICT289-Labs/Week\ 5-6/cmake-build-debug/Makefile&quot;  VERBOSE=1 Week5-6"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/Volumes/MEGA/Gits/ICT289-Labs/Week\ 5-6/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/Volumes/MEGA/Gits/ICT289-Labs/Week\ 5-6/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/Volumes/MEGA/Gits/ICT289-Labs/Week\ 5-6/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Week5-6/fast">
+				<Option output="/Volumes/MEGA/Gits/ICT289-Labs/Week 5-6/cmake-build-debug/Week5-6" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Volumes/MEGA/Gits/ICT289-Labs/Week 5-6/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Volumes/MEGA/Gits/ICT289-Labs/Week 5-6/ViewingLab/include"/>
+					<Add directory="/Volumes/MacDataDrive/Apps/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Volumes/MacDataDrive/Apps/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.3/include"/>
+					<Add directory="/Volumes/MacDataDrive/Apps/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j6 -f &quot;/Volumes/MEGA/Gits/ICT289-Labs/Week\ 5-6/cmake-build-debug/Makefile&quot;  VERBOSE=1 Week5-6/fast"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/Volumes/MEGA/Gits/ICT289-Labs/Week\ 5-6/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/Volumes/MEGA/Gits/ICT289-Labs/Week\ 5-6/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/Volumes/MEGA/Gits/ICT289-Labs/Week\ 5-6/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/Volumes/MEGA/Gits/ICT289-Labs/Week 5-6/ViewingLab/src/main.c">
+			<Option target="Week5-6"/>
+		</Unit>
+		<Unit filename="/Volumes/MEGA/Gits/ICT289-Labs/Week 5-6/ViewingLab/src/window.c">
+			<Option target="Week5-6"/>
+		</Unit>
+		<Unit filename="/Volumes/MEGA/Gits/ICT289-Labs/Week 5-6/ViewingLab/src/window.h">
+			<Option target="Week5-6"/>
+		</Unit>
+		<Unit filename="/Volumes/MEGA/Gits/ICT289-Labs/Week 5-6/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/Volumes/MEGA/Gits/ICT289-Labs/Week 5-6/ViewingLab/cmakeFiles/Findfreeglut.cmake">
+			<Option virtualFolder="CMake Files\ViewingLab\cmakeFiles\"/>
+		</Unit>
+		<Unit filename="/Volumes/MEGA/Gits/ICT289-Labs/Week 5-6/ViewingLab/src/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\ViewingLab\src\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

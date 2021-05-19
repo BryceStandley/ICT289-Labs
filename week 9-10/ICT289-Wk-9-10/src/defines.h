@@ -1,0 +1,1 @@
+#define CorrectMathDefine <ucrt/corecrt_math_defines.h>
