@@ -36,9 +36,11 @@ void WindowInit(int argc, char** argv, int windowWidth, int windowHeight, char* 
 
 	printf("Program lanuched successfully!");
 
-	glutTimerFunc(1, PhysicsUpdate, 0);
+	glutTimerFunc(TARGET_FPS, PhysicsUpdate, 0);
 
 	glutTimerFunc(1, InputTimer, 0);
+
+	previousTime = glutGet(GLUT_ELAPSED_TIME) / 1000.0f;
 
 }
 
@@ -85,7 +87,9 @@ void Render()
 	DrawGroundPlane(100, 100);
 
 	glColor3f(CYAN);
-	DrawBall(ballOne.ballID);
+	DrawBall(&ballOne);
+
+	DrawBall(&ballTwo);
 
 
 	//Swap the buffers
@@ -94,25 +98,39 @@ void Render()
 
 void PhysicsUpdate(int value)
 {
-	physicsTimer += 0.5f;
+	glutTimerFunc(TARGET_FPS, PhysicsUpdate, 0); // physics tick every 1 msecond
+
+	currentTime = glutGet(GLUT_ELAPSED_TIME) / 1000.0f;
+	deltaTime = currentTime - previousTime;
+
 	Render();
 
 	//Physics updates go here
-	UpdateBall(&ballOne, (int)physicsTimer, camera.Forward);
+	UpdateBall(&ballOne, deltaTime, camera.Forward);
+	if (ballTwo.thrown)
+	{
+		UpdateBall(&ballTwo, deltaTime, camera.Forward);
+	}
+	previousTime = currentTime;
+	glutPostRedisplay();
 
 
-	glutTimerFunc(1, PhysicsUpdate, 0); // physics tick every 1 msecond
+	
 }
 
-void DrawBall(int ballID)
+void DrawBall(Ball* ball)
 {
 	glPushMatrix();
-	if (ballID == 1)
+
+	glTranslatef(ball->transform.Position.x, ball->transform.Position.y, ball->transform.Position.z);
+	if (!ball->hasModel)
 	{
-		glTranslatef(ballOne.transform.Position.x, ballOne.transform.Position.y, ballOne.transform.Position.z);
-		glutSolidSphere(ballOne.ballRadius, 30, 30);
+		glutSolidSphere(ball->ballRadius, 30, 30);
 	}
-	
+	else
+	{
+		DrawOffFile(&ball->ballModel);
+	}
 
 	glPopMatrix();
 }
@@ -141,9 +159,16 @@ void init(int w, int h)
 
 
 	InitBall(&ballOne, 0.5f);
-	ballOne.rigidbody.speed = 0.01f;
 	ballOne.transform.Position = (Vector3) { .x = 5.0f, .y = 10.0f, .z = 5.0f };
+	ballOne.rigidbody.Acceleration.y = -ballOne.rigidbody.gravity;
 	ballOne.StartPosition = ballOne.transform.Position;
+	if (LoadOffFile("./res/bone_normalized_aligned.off", &ballOne.ballModel))
+	{
+		ballOne.hasModel = 1;
+	}
+
+	ballTwo = ballOne;
+	ballTwo.transform.Position.y = -10.0f;
 
 	//LoadModels();
 

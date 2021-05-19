@@ -274,3 +274,11 @@ Vector4 Normalize4(Vector4 a)
 	v.w = a.w * Magnatude4(a);
 	return v;
 }
+
+Vector3 Invert3(Vector3 a)
+{
+	a.x *= -1;
+	a.y *= -1;
+	a.z *= -1;
+	return a;
+}

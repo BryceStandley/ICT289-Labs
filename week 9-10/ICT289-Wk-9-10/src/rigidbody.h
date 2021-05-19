@@ -19,7 +19,7 @@ Vector3 Acceleration(Vector3 force, float mass);
 
 Vector3 AverageVelocity(Vector3 initVelocity, Vector3 finalVelocity);
 
-Vector3 Displace(Vector3 InitVelocity, Vector3 Acceleration, float time);
+Vector3 Displace(Vector3 position, Vector3 velocity, Vector3 Acceleration, float time);
 
 Vector3 Force(float mass, Vector3 Acceleration);
 

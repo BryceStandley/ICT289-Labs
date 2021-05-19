@@ -6,7 +6,7 @@ void InitRigidbody(Rigidbody* rb)
 	rb->mass = 1;
 	rb->velocity = (Vector3){.x = 0, .y = 0, .z = 0};
 	rb->speed = 0;
-	rb->Acceleration = (Vector3){ .x = 0, .y = rb->gravity, .z = 0 };
+	rb->Acceleration = (Vector3){ .x = 0, .y = rb->gravity*-1, .z = 0 };
 	rb->Force = (Vector3){ .x = 0, .y = 0, .z = 0 };
 }
 
@@ -27,10 +27,9 @@ Vector3 AverageVelocity(Vector3 initVelocity, Vector3 finalVelocity)
 	return Divide3(Add3(initVelocity, finalVelocity), 2.0f);
 }
 
-Vector3 Displace(Vector3 InitVelocity, Vector3 Acceleration, float time)
+Vector3 Displace(Vector3 position, Vector3 velocity, Vector3 Acceleration, float deltaTime)
 {
-	// displacement = Initial Velocity * time     +     1/2  * acceleration * time^2
-	Vector3 result = Add3(Scale3(InitVelocity, time), Scale3(Scale3(Acceleration, pow(time, 2)), 0.5));
+	Vector3 result = Add3(Add3(position, Scale3(velocity, deltaTime)), Scale3(Acceleration, deltaTime * deltaTime / 2.0f));
 	return result;
 }
 
@@ -46,8 +45,12 @@ Vector3 Force(float mass, Vector3 Acceleration)
 	return result;
 }
 
+
+
 Vector3 ForceDueToGravity(float mass, float gravity)
 {
 	Vector3 result = Vector3Zero;
 	return result;
 }
+
+

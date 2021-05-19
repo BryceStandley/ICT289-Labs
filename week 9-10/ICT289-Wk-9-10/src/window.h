@@ -17,7 +17,10 @@
  * \date  April 2021
  */
 
-#define TARGET_FPS 30
+#define TARGET_FPS 10
+
+
+float deltaTime, previousTime, currentTime;
 
 /**
 * \brief Aditional init function for unrelated items to glut
@@ -52,7 +55,7 @@ void WindowReSize(int w, int h);
 */
 void LoadModels();
 
-void DrawBall(int ballID);
+void DrawBall(Ball* ball);
 
 void PhysicsUpdate(int value);
 

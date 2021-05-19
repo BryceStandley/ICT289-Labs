@@ -17,7 +17,7 @@ void PressNormalInput(unsigned char key, int xVal, int yVal)
 		break;
 	case 'T':
 	case 't':
-		ThrowNewBall();
+		ThrowNewBall(&ballTwo, &camera);
 		break;
 	default:
 		break;

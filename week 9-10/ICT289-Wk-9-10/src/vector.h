@@ -229,5 +229,10 @@ Vector3 Normalize3(Vector3 a);
 */
 Vector4 Normalize4(Vector4 a);
 
+/**
+ * \brief Inverts a vector 3
+ */
+Vector3 Invert3(Vector3 a);
+
 #endif // !VECTOR_H
 
